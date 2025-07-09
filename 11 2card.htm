@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card payment</title>
+</head><style>
+    .main{
+        position:relative;
+        width:458px;
+        height:234px;
+       
+        
+    }
+    .card{
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition:all 1s ease;
+    }
+    .card:hover{
+        transform:rotateX(180deg);
+    }
+    .front{
+        position:absolute;
+         width:100%;
+        height:100%;
+        backface-visibility:hidden;
+        background-image: url(image/cardback.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        
+      
+
+        
+    }
+    .back{
+        backface-visibility:hidden;
+        position:absolute;
+         width:100%;
+        height: 100%;
+         background-image: url(image/cardback.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform:rotateX(180deg);
+        align-content: center;
+       }
+       #deb .front{
+         background-image: url(image/debit.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+       }
+       #deb .back{
+         background-image: url(image/debit.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+       }
+
+
+    h1{
+        background-color: black;
+        color: brown;
+        border: double yellow 5px;
+        width: 300px;
+       
+    }
+    h2{background-color: rgb(11, 248, 169);
+        font-weight: 800;
+        color: rgb(52, 4, 4);
+        border: double rgb(68, 68, 4) 5px;
+        width: 400px;
+
+    }
+</style>
+<body>
+    <hr color="black" size="15px">
+    
+    <div align="center" style="border: solid black 5px;background-color: antiquewhite;"><h2>\\\CHOOSE CARD TYPE///</h2>
+        <details> <summary><h1>CREADIT CARD</h1></summary>
+    <div class="main">
+        <div class="card">
+            <div class="front"><br><br><br>
+                <h1 style="background-color: azure;">fill details</h1>
+               
+
+                
+            </div>
+            <div class="back">
+               <p style="color: black;font-weight: 900;background-color: white;width: 200px;">cno: <input type="number" placeholder="cno:"maxlength="12"><br></p><br>
+              <p align="left" style="color: black;font-weight: 900;position: absolute;"> <span style="background-color: azure;">valid:</span><input type="month"> </p>
+              <p align="right" style="color: black;font-weight: 900;"> <span style="background-color: azure;">cvv:</span style="width:20px"><input type="number" maxlength="4"> </p>
+                
+            </div>
+        </div>
+        
+    </div>  <p style="font-size: 40px;"><input type="submit"></details></p>
+
+    
+   
+    <details id="deb">
+       <summary><h1>DEBIT CARD</h1></summary> 
+       <div class="main">
+        <div class="card">
+            <div class="front"><br><br><br><br>
+                <h1 style="background-color: azure;">fill details</h1>
+               
+
+                
+            </div>
+            <div class="back">
+               <p style="color: black;font-weight: 900;background-color: white;width: 200px;">cno: <input type="number" placeholder="cno:"maxlength="12"><br></p><br>
+              <p align="left" style="color: black;font-weight: 900;position: absolute;"> <span style="background-color: azure;">valid:</span><input type="month"> </p>
+              <p align="right" style="color: black;font-weight: 900;"> <span style="background-color: azure;">cvv:</span style="width:20px"><input type="number" maxlength="4"> </p>
+                
+            </div>
+        </div>
+        
+    </div>
+    <p style="font-size: 40px;color: black;"><input type="submit"></p>
+    </details>
+
+    </div>
+</body>
+</html>
